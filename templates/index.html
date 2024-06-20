@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .pdf-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .pdf-list li {
+            margin: 5px 0;
+        }
+        .pdf-list li a {
+            text-decoration: none;
+            color: blue;
+        }
+        .pdf-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Selector</h1>
+    <ul class="pdf-list">
+        {% for pdf in pdf_files %}
+            <li><a href="{{ url_for('open_pdf', filename=pdf) }}" target="_blank">{{ pdf }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
