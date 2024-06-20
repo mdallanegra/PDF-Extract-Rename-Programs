@@ -21,7 +21,29 @@ def list_pdfs_in_folder(folder_path):
 
 
 class PDFSelector:
+    """
+    A class that represents a PDF Selector.
+
+    Attributes:
+        root (tk.Tk): The root window of the application.
+        folder_path (tk.StringVar): The variable to store the selected folder path.
+        listbox (tk.Listbox): The listbox widget to display the PDF files.
+
+    Methods:
+        __init__(self, root): Initializes the PDFSelector object.
+        browse_folder(self): Opens a file dialog to select a folder.
+        list_pdfs(self): Lists the PDF files in the selected folder.
+        open_selected(self): Opens the selected PDF files.
+        open_all(self): Opens all the PDF files in the selected folder.
+    """
+
     def __init__(self, root):
+        """
+        Initializes the PDFSelector object.
+
+        Args:
+            root (tk.Tk): The root window of the application.
+        """
         self.root = root
         self.root.title("PDF Selector")
 
@@ -41,10 +63,16 @@ class PDFSelector:
         tk.Button(root, text="Open All", command=self.open_all).pack(pady=5)
 
     def browse_folder(self):
+        """
+        Opens a file dialog to select a folder.
+        """
         folder_selected = filedialog.askdirectory()
         self.folder_path.set(folder_selected)
 
     def list_pdfs(self):
+        """
+        Lists the PDF files in the selected folder.
+        """
         self.listbox.delete(0, tk.END)
         folder = self.folder_path.get()
 
@@ -64,6 +92,9 @@ class PDFSelector:
                 "Info", "No PDF files found in the selected folder.")
 
     def open_selected(self):
+        """
+        Opens the selected PDF files.
+        """
         selected_indices = self.listbox.curselection()
         folder = self.folder_path.get()
 
@@ -77,6 +108,9 @@ class PDFSelector:
             webbrowser.open(pdf_path)
 
     def open_all(self):
+        """
+        Opens all the PDF files in the selected folder.
+        """
         folder = self.folder_path.get()
         pdf_files = [self.listbox.get(i) for i in range(self.listbox.size())]
 
