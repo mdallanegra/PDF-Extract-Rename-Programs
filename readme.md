@@ -1,9 +1,10 @@
 # PDF Text Extraction and Renaming Program
 
-This program allows you to extract text from PDF files and rename them accordingly. 
+This programs will allow you to extract text from PDF files and rename them accordingly.
 
 ## Features
 
+- Open folder and list pdf files.
 - Text extraction: Extract text from PDF files and save it as plain text.
 - Renaming: Rename PDF files based on their extracted text content.
 
