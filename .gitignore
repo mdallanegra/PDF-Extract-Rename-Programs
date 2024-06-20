@@ -1,3 +1,5 @@
-# Ignored Files
+# Ignored Files & Folders
 
 .DS_Store
+.vscode
+.venv
