@@ -1,7 +1,7 @@
 '''Look for PDFs in Folder and list them in order
     to select one name or all of them'''
 
-import PyPDF2
+# import PyPDF2
 import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
