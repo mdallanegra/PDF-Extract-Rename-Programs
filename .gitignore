@@ -1,0 +1,14 @@
+# Ignored Global Files & Folders
+
+.DS_Store
+.vscode
+.venv
+
+# Ignored Files & Folders
+
+RenamePyPDF2.py
+RenamePyPDF3.py
+RenamePyPDF4.py
+RenamePyPDF5.py
+RenamePyPDF6.py
+RenamePyPDF.py
